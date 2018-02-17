@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shoot-destroy.wav-58ba5f1d073fcdb7ef389c09eaabdb73.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/shoot-destroy.wav"
+source_md5="9e081515db078b5b48bcb8d73de89302"
+
+dest_files=[ "res://.import/shoot-destroy.wav-58ba5f1d073fcdb7ef389c09eaabdb73.sample" ]
+dest_md5="87d8e499c351bd41151d257f229b33b1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

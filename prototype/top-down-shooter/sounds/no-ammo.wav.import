@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/no-ammo.wav-d0c8ee7fcc6f307a687fb095f33b5892.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/no-ammo.wav"
+source_md5="69220e5e89d3cfa2c64a3fbc517bd315"
+
+dest_files=[ "res://.import/no-ammo.wav-d0c8ee7fcc6f307a687fb095f33b5892.sample" ]
+dest_md5="5c67baefd5d8ff746029d1f28f8c33c9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

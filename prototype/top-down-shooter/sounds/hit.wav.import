@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit.wav-d87a043d54c23f529b411dc10aac6533.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/hit.wav"
+source_md5="ad3f6de58ecc80e1470d458915cc6904"
+
+dest_files=[ "res://.import/hit.wav-d87a043d54c23f529b411dc10aac6533.sample" ]
+dest_md5="cfe9eb5e37751304fd4fc1bda14662b2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

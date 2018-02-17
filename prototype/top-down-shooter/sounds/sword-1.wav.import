@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sword-1.wav-2c459c517bda35b3137c5a41438d5a29.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/sword-1.wav"
+source_md5="4e8ce1b3d12a1cb7213441153ef74da7"
+
+dest_files=[ "res://.import/sword-1.wav-2c459c517bda35b3137c5a41438d5a29.sample" ]
+dest_md5="bbb04f0f879e338b8f211f2d54f70c03"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

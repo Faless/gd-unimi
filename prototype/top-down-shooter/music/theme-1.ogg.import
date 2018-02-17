@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/theme-1.ogg-a1af3e75342ca42bcd4bd81878c48a89.oggstr"
+
+[deps]
+
+source_file="res://top-down-shooter/music/theme-1.ogg"
+source_md5="c387d7dff348656583a284da15535c4a"
+
+dest_files=[ "res://.import/theme-1.ogg-a1af3e75342ca42bcd4bd81878c48a89.oggstr" ]
+dest_md5="cfcc40faa17d0eab9c7d2e3761e10901"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/window-hit-2.wav-9ebf97cce829a36358ce03e406832c6b.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/window-hit-2.wav"
+source_md5="c7f3129d4807129b21930181deadcfa9"
+
+dest_files=[ "res://.import/window-hit-2.wav-9ebf97cce829a36358ce03e406832c6b.sample" ]
+dest_md5="00dee91e85876ec0c20a896dbe3cefe1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

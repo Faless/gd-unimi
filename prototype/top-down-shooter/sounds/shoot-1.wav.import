@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shoot-1.wav-671a7d552df86eceea67d6121460bbc4.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/shoot-1.wav"
+source_md5="4bc045a144ac0e2645a69219939e123f"
+
+dest_files=[ "res://.import/shoot-1.wav-671a7d552df86eceea67d6121460bbc4.sample" ]
+dest_md5="6643ae5b198eaebfeae12b0f268d6257"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/flame-thrower.wav-505aad7e7a7669d10300d7e882d544c9.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/flame-thrower.wav"
+source_md5="931656b33b6e2ed28b704db30ab4be57"
+
+dest_files=[ "res://.import/flame-thrower.wav-505aad7e7a7669d10300d7e882d544c9.sample" ]
+dest_md5="07a865a40ca299f2193840d3096e2101"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

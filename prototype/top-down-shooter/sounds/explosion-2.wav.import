@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion-2.wav-a4bdfd0f24e2956b361300129d4a1b6b.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/explosion-2.wav"
+source_md5="1716141a88aa8e64a18f7352a26588cc"
+
+dest_files=[ "res://.import/explosion-2.wav-a4bdfd0f24e2956b361300129d4a1b6b.sample" ]
+dest_md5="b4c7dbff2b348dbf316bcce783788f46"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

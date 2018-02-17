@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cure.wav-5fc50119d565322ca75046300d835908.sample"
+
+[deps]
+
+source_file="res://top-down-shooter/sounds/cure.wav"
+source_md5="095f2de94a56ad3b1b121d861445ad70"
+
+dest_files=[ "res://.import/cure.wav-5fc50119d565322ca75046300d835908.sample" ]
+dest_md5="31bd6b2e7916cc211423e2ecba1c382d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
