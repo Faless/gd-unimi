@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://script/main.gd" type="Script" id=1]
 [ext_resource path="res://scene/local_popup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/online_popup.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Control"]
 
@@ -146,10 +147,20 @@ _sections_unfolded = [ "Margin" ]
 
 visible = false
 
+[node name="Online" parent="." index="2" instance=ExtResource( 3 )]
+
+visible = false
+
 [connection signal="pressed" from="Panel/VBoxContainer/Local" to="." method="_on_Local_pressed"]
+
+[connection signal="pressed" from="Panel/VBoxContainer/Online" to="." method="_on_online_pressed"]
 
 [connection signal="confirmed" from="Local" to="." method="_on_local_start"]
 
 [connection signal="popup_hide" from="Local" to="." method="_on_local_cancel"]
+
+[connection signal="confirmed" from="Online" to="." method="_on_online_start"]
+
+[connection signal="popup_hide" from="Online" to="." method="_on_online_cancel"]
 
 

@@ -5,7 +5,7 @@
 [ext_resource path="res://top-down-shooter/characters/body/1.png" type="Texture" id=3]
 [ext_resource path="res://top-down-shooter/weapons/attach-to-body/1.png" type="Texture" id=4]
 [ext_resource path="res://top-down-shooter/characters/head/1.png" type="Texture" id=5]
-[ext_resource path="res://top-down-shooter/characters/example.png" type="Texture" id=6]
+[ext_resource path="res://script/player_controls.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -31,7 +31,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 0 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -79,10 +79,8 @@ texture = ExtResource( 5 )
 offset = Vector2( 0, -5.5 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="example" type="Sprite" parent="." index="5"]
+[node name="PlayerControls" type="Node" parent="." index="5"]
 
-modulate = Color( 1, 0, 0, 0 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+script = ExtResource( 6 )
 
 
