@@ -10,7 +10,7 @@ source_file="res://top-down-shooter/effects/3.png"
 source_md5="7f353aa25a60eb07a90f5dfdbd69c900"
 
 dest_files=[ "res://.import/3.png-99a59cfff290054d81866bbb66c10de5.stex" ]
-dest_md5="1e2335e7d4cfd2cb2c53d114037c8bac"
+dest_md5="22abc742a873e884ef4b3900d6e41434"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
