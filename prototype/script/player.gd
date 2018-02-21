@@ -26,7 +26,7 @@ func _physics_process(delta):
 	if state.right and not state.left:
 		walking = true
 		dir.x = 1
-	rpc_unreliable("walk_update", OS.get_unix_time(), position, walking, dir * (delta * SPEED))
+	rpc_unreliable("walk_update", OS.get_unix_time(), position, walking, dir * SPEED)
 	if _fire_timer > 0:
 		_fire_timer -= delta
 	elif state.fire:
@@ -40,7 +40,7 @@ sync func walk_update(time, pos, walking, movement):
 	position = pos
 	if walking:
 		rotation = -(PI/2.0-movement.angle())
-		move_and_collide(movement)
+		move_and_slide(movement)
 		if not $Leg/AnimationPlayer.is_playing():
 			$Leg/AnimationPlayer.play("walk")
 	elif $Leg/AnimationPlayer.is_playing():
