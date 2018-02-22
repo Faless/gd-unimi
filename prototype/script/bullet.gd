@@ -9,9 +9,12 @@ func _ready():
 	if Network.is_server():
 		Network.connect("network_tick", self, "send_pos_update")
 		$Timer.start()
+	else:
+		collision_mask = 0
+		collision_layer = 0
 
 func send_pos_update():
-	if _exploded:
+	if _exploded or not Network.is_online():
 		return
 	rpc_unreliable("update_pos", OS.get_unix_time(), global_position)
 
@@ -31,8 +34,14 @@ sync func explode(pos):
 	yield($AnimationPlayer, "animation_finished")
 	call_deferred("queue_free")
 
-func _on_Timer_timeout():
-	explode(global_position)
+func _explode():
+	if not Network.is_online():
+		explode(global_position)
+	elif Network.is_server():
+		rpc("explode", global_position)
 
-func _on_Bullet_body_entered( body ):
-	rpc("explode", global_position)
+func _on_Timer_timeout():
+	_explode()
+
+func _on_Bullet_body_entered(body):
+	_explode()
