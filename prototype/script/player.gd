@@ -8,11 +8,16 @@ const FIRE_SPEED = .2
 var _update_time = 0.0
 var _fire_timer = 0.0
 
+func _ready():
+	if name == str(Network.get_peer_id()):
+		$Camera2D.current = true
+
 func _physics_process(delta):
 	if not Network.is_server():
 		return
 	var state = $PlayerControls.get_state()
 	var walking = false
+	var firing = false
 	var dir = Vector2()
 	if state.up and not state.down:
 		walking = true
@@ -26,12 +31,19 @@ func _physics_process(delta):
 	if state.right and not state.left:
 		walking = true
 		dir.x = 1
-	rpc_unreliable("walk_update", OS.get_unix_time(), position, walking, dir * SPEED)
 	if _fire_timer > 0:
 		_fire_timer -= delta
 	elif state.fire:
 		_fire_timer = FIRE_SPEED
-		rpc("fire", name + "_" + str(randi()))
+		firing = true
+	if Network.is_online():
+		rpc_unreliable("walk_update", OS.get_unix_time(), position, walking, dir * SPEED)
+		if firing:
+			rpc("fire", name + "_" + str(randi()))
+	else:
+		walk_update(OS.get_unix_time(), position, walking, dir * SPEED)
+		if firing:
+			fire(name + "_" + str(randi()))
 
 sync func walk_update(time, pos, walking, movement):
 	if _update_time > time:
@@ -56,3 +68,6 @@ sync func fire(bullet_name):
 	bullet.add_collision_exception_with(self)
 	if(get_parent() != null):
 		get_parent().add_child(bullet)
+
+sync func destroy():
+	call_deferred("queue_free")
