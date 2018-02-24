@@ -44,4 +44,6 @@ func _on_Timer_timeout():
 	_explode()
 
 func _on_Bullet_body_entered(body):
+	if(body.has_method("hit")):
+		body.hit()
 	_explode()
