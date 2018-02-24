@@ -6,24 +6,30 @@ var crate_esplosion = preload("res://scene/crate_explosion_effect.tscn")
 func _ready():
 	pass
 
-sync func hit():
-	HP-=1
-	if(HP == 0):
-		_destroy()
+func hit():
+	if not Network.is_server():
+		return
+	HP -= 1
+	if HP == 0:
+		if Network.is_online():
+			rpc("destroy")
+		else:
+			destroy()
 	else:
-		_hit_effect()
+		if Network.is_online():
+			rpc("hit_effect")
+		else:
+			hit_effect()
 
-func _hit_effect():
+sync func hit_effect():
 	$Sprite.modulate = Color(1,0,0,1)
-	yield( get_tree().create_timer(0.2),"timeout" )
+	$HitTimer.start()
+	yield($HitTimer, "timeout")
 	$Sprite.modulate = Color(1,1,1,1)
 
-func _destroy():
+sync func destroy():
 	var explosion = crate_esplosion.instance()
 	get_parent().add_child(explosion)
 	explosion.position = position
 	explosion.emitting = true
 	queue_free()
-#func _process(delta):
-
-#	pass
